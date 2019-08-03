@@ -63,7 +63,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
   logoTitle = "Paper"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["Hugo", "theme","Paper"]
+  keywords = ["Hugo", "theme","pure"]
   description = "Elephant's blog."
 
   # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
@@ -98,6 +98,16 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   contentCopyright = ''     # e.g. '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
 
 
+  changyanAppid = ""        # Changyan app id             # 畅言
+  changyanAppkey = ""       # Changyan app key
+
+  livereUID = ""            # LiveRe UID                  # 来必力
+
+  baiduPush = false        # baidu push                  # 百度
+  baiduAnalytics = ""      # Baidu Analytics
+  baiduVerification = ""   # Baidu Verification
+  googleVerification = ""  # Google Verification         # 谷歌
+
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   customCSS = []
@@ -124,6 +134,53 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     hint = 30               # Display hint if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示提醒
     warn = 180              # Display warning if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示警告
 
+  [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+    owner = ""              # Your GitHub ID
+    repo = ""               # The repo to store comments
+    clientId = ""           # Your client ID
+    clientSecret = ""       # Your client secret
+
+  [params.utterances]       # https://utteranc.es/
+    owner = ""              # Your GitHub ID
+    repo = ""               # The repo to store comments
+
+  [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+    owner = ""              # Your GitHub ID
+    repo = ""               # The repo to store comments
+    clientId = ""           # Your client ID
+    clientSecret = ""       # Your client secret
+
+  # Valine.
+  # You can get your appid and appkey from https://leancloud.cn
+  # more info please open https://valine.js.org
+  [params.valine]
+    enable = false
+    appId = '你的appId'
+    appKey = '你的appKey'
+    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+    verify = false # Verification code
+    avatar = 'mm' 
+    placeholder = '说点什么吧...'
+    visitor = false
+
+  [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
+    enable = false
+    options = ""
+
+  [params.sequenceDiagrams] # see https://blog.olowolo.com/example-site/post/js-sequence-diagrams/
+    enable = false
+    options = ""            # default: "{theme: 'simple'}"
+
+  [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
+    enable = false
+    siteUV = true
+    sitePV = true
+    pagePV = true
+
+  [params.reward]                                         # 文章打赏
+    enable = false
+    wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
+    alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
 
 #  [params.social]                                         # 社交链接
@@ -142,6 +199,15 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 #    m-instagram = "http://localhost:1313"
 #    n-gitlab = "http://localhost:1313"
 #    o-bilibili = "http://localhost:1313"
+
+
+# See https://gohugo.io/about/hugo-and-gdpr/
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true      # 12.214.31.144 -> 12.214.31.0
+  [privacy.youtube]
+    privacyEnhanced = true
+
 
 # 将下面这段配置取消注释可以使 hugo 生成 .md 文件
 # Uncomment these options to make hugo output .md files.
